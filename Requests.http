@@ -1,0 +1,64 @@
+GET localhost:8080/patient
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczMTc1ODIxMiwiZXhwIjoxNzMxNzU4ODEyfQ.nZZqQB5FtfWUGR2vPVK27r4LQV3YU2KC1tLkPDSxJqnvjXt5p9T-zxtWfrCgbS0V
+
+###
+POST localhost:8080/patient
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczMTc1ODIxMiwiZXhwIjoxNzMxNzU4ODEyfQ.nZZqQB5FtfWUGR2vPVK27r4LQV3YU2KC1tLkPDSxJqnvjXt5p9T-zxtWfrCgbS0V
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "birthdate": "1995-02-19",
+  "phonenumber": "+1234567457",
+  "address": "152 Rally pr.",
+  "email": "wwwjohndoe@gmail.com"
+}
+
+###
+POST localhost:8080/auth/register
+Content-Type: application/json
+
+{
+"username": "admin",
+"password": "admin",
+"role": "ADMIN"
+}
+
+###
+POST localhost:8080/auth/register
+Content-Type: application/json
+
+{
+"username": "user2",
+"password": "12345",
+"role": "USER"
+}
+
+###
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+###
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "12345"
+}
+
+###
+PUT localhost:8080/patient/6
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczMTc1ODIxMiwiZXhwIjoxNzMxNzU4ODEyfQ.nZZqQB5FtfWUGR2vPVK27r4LQV3YU2KC1tLkPDSxJqnvjXt5p9T-zxtWfrCgbS0V
+Content-Type: application/json
+
+{
+  "firstname": "Johnatan",
+  "lastprocedure": 2
+}

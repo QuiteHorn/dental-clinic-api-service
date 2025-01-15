@@ -1,0 +1,87 @@
+databaseChangeLog:
+  # Schema
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.SCHEMA
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../DentalClinic.SCHEMA.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+
+  # Tables
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Dentist
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/tables/DentalClinic.Dentist.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Procedure
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/tables/DentalClinic.Procedure.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Patient
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/tables/DentalClinic.Patient.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.User
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/tables/DentalClinic.User.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.History
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/tables/DentalClinic.History.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+
+  # Data
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Dentist.DATA
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/data/DentalClinic.Dentist.DATA.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Procedure.DATA
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/data/DentalClinic.Procedure.DATA.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.Patient.DATA
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/data/DentalClinic.Patient.DATA.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+  - changeSet:
+      id: DentalClinic/v1.0.0/DentalClinic/DentalClinic.User.DATA
+      author: meerakee
+      changes:
+        - sqlFile:
+            path: ../../sql/data/DentalClinic.User.DATA.sql
+            relativeToChangelogFile: true
+            splitStatements: false
