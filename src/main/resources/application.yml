@@ -5,14 +5,14 @@ spring:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.yaml
   datasource:
-    url: jdbc:postgresql://localhost:5432/dentalclinic
-    username: postgres
-    password: '12345'
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASS}
     driver-class-name: org.postgresql.Driver
   main:
     allow-bean-definition-overriding=true:
 
 token:
-  expiration-time: 600000
+  expiration-time: ${JWT_EXP_TIME:600000}
   signing:
-    key: '53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855'
+    key: ${JWT_SECRET_KEY:53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855}
